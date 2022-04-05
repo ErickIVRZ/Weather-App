@@ -37,17 +37,17 @@ useEffect(()=>{
 let emoji=null;
 
 if(typeof data.main !="undefined"){
-  if(data.weather[0].main =="Cloud"){
+  if(data.weather[0].main ==="Cloud"){
     emoji= "fa-cloud"
-  }else if(data.weather[0].main =="Thunderstorm"){
+  }else if(data.weather[0].main ==="Thunderstorm"){
     emoji= "fa-bolt"
-  }else if(data.weather[0].main =="Clear"){
+  }else if(data.weather[0].main ==="Clear"){
     emoji= "fa-sun"
-  }else if(data.weather[0].main =="Drizzle"){
+  }else if(data.weather[0].main ==="Drizzle"){
     emoji= "fa-cloud-rain"
-  }else if(data.weather[0].main =="Rain"){
+  }else if(data.weather[0].main ==="Rain"){
     emoji= "fa-cloud-showers-heavy"
-  }else if(data.weather[0].main =="Snow"){
+  }else if(data.weather[0].main ==="Snow"){
     emoji= "fa-snow-flake"
   }else{
     emoji = "fa-smog"
