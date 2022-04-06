@@ -11,11 +11,12 @@ const SearchWeather = () => {
   const [input,setInpunt]=useState("")
  
 
+
   
 
-  let componentMounted=true;
-
 useEffect(()=>{
+
+  let componentMounted=true;
   const fetchWeater= async()=>{
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=3bdd4dbf1a5e33dbeab8bb3aae92f839`);
   
@@ -23,15 +24,19 @@ useEffect(()=>{
     setData(await response.json())
     
   }
+ 
   return ()=>{
     componentMounted=false
 
-  }
+  
+}
 }
 
   fetchWeater()
 
 },[search])
+
+
 
 let emoji=null;
 
@@ -113,10 +118,6 @@ const locacion=()=>{
 }
 
 }
-
-
-
-
   return (
     <div>
       <div className="container mt-5">
