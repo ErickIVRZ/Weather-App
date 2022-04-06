@@ -21,8 +21,7 @@ useEffect(()=>{
   
   if(componentMounted){
     setData(await response.json())
-    console.log(data)
-    console.log(data)
+    
   }
   return ()=>{
     componentMounted=false
@@ -123,12 +122,12 @@ const locacion=()=>{
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-md-5">
-          <div class="card text-white text-center border-0">
+          <div className="card text-white text-center border-0">
               <img src={`https://source.unsplash.com/600x900/?${data.weather[0].main}`}
-              class="card-img" alt="..."/>
-              <div class="card-img-overlay">
+              className="card-img" alt="..."/>
+              <div className="card-img-overlay">
                 <form onSubmit={handleSubmit}>
-                <div class="input-group mb-4 w-75 mx-auto">
+                <div className="input-group mb-4 w-75 mx-auto">
                   <input type="search"
                    class="form-control"
                     placeholder="Search City"
@@ -140,18 +139,18 @@ const locacion=()=>{
                      required                  
                      
                      />
-                  <button type='submit' class="input-group-text" id="basic-addon2">
+                  <button type='submit' className="input-group-text" id="basic-addon2">
                   <i class="fa-solid fa-magnifying-glass"></i>          
                   </button>
-                  <button onClick={locacion}  type='submit' class="input-group-text" id="basic-addon2">
-                  <i class="fa-solid fa-location-dot"></i>         
+                  <button onClick={locacion}  type='submit' className="input-group-text" id="basic-addon2">
+                  <i className="fa-solid fa-location-dot"></i>         
                   </button>
                  
                 </div>  
                 </form>
                 <div className="bg-dark bg-opacity-50 py-3">
-                <h2 class="card-title">{data.name}</h2>
-                <p class="card-text lead">
+                <h2 className="card-title">{data.name}</h2>
+                <p className="card-text lead">
                   {day},{month} {date}, {year}
                   <br />
                   {time}
@@ -164,14 +163,7 @@ const locacion=()=>{
                <p className="lead fw-bolder mb-0">{data.weather[0].main}</p>
                <p className='lead'>{temp_min} &deg;C | {temp_max} &deg;C</p>  
 
-               
-              <div>
-
              
-              </div>
-
-
-
                 </div>
               </div>
             </div>
